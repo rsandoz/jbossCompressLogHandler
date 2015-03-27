@@ -1,0 +1,11 @@
+<custom-handler name="FILE" class="loggers.CompressHandler" module="loggers">
+    <formatter>
+        <pattern-formatter pattern="%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n"/>
+    </formatter>
+    <properties>
+        <property name="suffix" value=".yyyy-MM-dd HHmm"/>
+        <property name="append" value="true"/>
+        <property name="maxBackupIndex" value="10"/>
+        <property name="fileName" value="${jboss.server.log.dir}/serverC.log"/>
+    </properties>
+</custom-handler>
